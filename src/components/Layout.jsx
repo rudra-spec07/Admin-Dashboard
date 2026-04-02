@@ -16,7 +16,7 @@ export default function Layout({ children, theme, setTheme }) {
             {isOpen ? <X /> : <Menu />}
           </button>
           <h1 className="text-xl font-black tracking-tighter uppercase italic">
-            Matrix<span className="text-primary">DB</span>
+            RUDRA<span className="text-primary">DB</span>
           </h1>
         </div>
 
