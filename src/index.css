@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root[data-theme='light'] {
+  --bg-main: #f8fafc;
+  --bg-paper: #ffffff;
+  --primary: #3b82f6;
+  --accent: #6366f1;
+  --text-main: #1e293b;
+}
+
+:root[data-theme='sunset'] {
+  --bg-main: #2d1b2e;
+  --bg-paper: #4a2c40;
+  --primary: #fb923c;
+  --accent: #f43f5e;
+  --text-main: #fee2e2;
+}
+
+:root[data-theme='hacker'] {
+  --bg-main: #000000;
+  --bg-paper: #0a0a0a;
+  --primary: #00ff41;
+  --accent: #008f11;
+  --text-main: #00ff41;
+}
+
+body {
+  @apply bg-bgMain text-textMain transition-colors duration-500;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hacker Mode Specifics */
+:root[data-theme='hacker'] * {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+  border-color: #00ff4122 !important;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.4; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+.floating-icon {
+  display: none;
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--primary);
+  animation: floatUp linear infinite;
+}
+
+:root[data-theme='hacker'] .floating-icon {
+  display: block;
+}
