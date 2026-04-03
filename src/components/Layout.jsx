@@ -33,9 +33,9 @@ export default function Layout({ children, theme, setTheme }) {
           <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/10 text-primary">
             <LayoutDashboard size={20} /> <span className="font-bold">Dashboard</span>
           </div>
-          <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-colors cursor-pointer opacity-70">
+          {/* <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-colors cursor-pointer opacity-70">
             <Table size={20} /> <span>Analytics</span>
-          </div>
+          </div> */}
         </div>
       </aside>
 
